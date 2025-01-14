@@ -249,7 +249,7 @@ const Ergebnis = () => {
                             directoryPath: './pdfs'
                         };
 
-                        axios.post('https://localhost:3000/save-pdf', data)
+                        axios.post('http://localhost:3000/save-pdf', data)
                             .then(response => {
                                 console.log('PDF gespeichert:', response.data);
                                 resolve();
@@ -291,7 +291,7 @@ const Ergebnis = () => {
                 };
 
                 axios
-                    .post('https://localhost:3000/send-email', formData)
+                    .post('http://localhost:3000/send-email', formData)
                     .then((response) => {
                         console.log('Anfrage:', response.config);
                         console.log('Antwort:', response.data);
