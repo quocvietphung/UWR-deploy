@@ -249,7 +249,7 @@ const Ergebnis = () => {
                             directoryPath: './pdfs'
                         };
 
-                        axios.post('https://api.uwr.orgaplan-beratung.de/save-pdf', data)
+                        axios.post('https://localhost:3000/save-pdf', data)
                             .then(response => {
                                 console.log('PDF gespeichert:', response.data);
                                 resolve();
@@ -291,7 +291,7 @@ const Ergebnis = () => {
                 };
 
                 axios
-                    .post('https://api.uwr.orgaplan-beratung.de/send-email', formData)
+                    .post('https://localhost:3000/send-email', formData)
                     .then((response) => {
                         console.log('Anfrage:', response.config);
                         console.log('Antwort:', response.data);

@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const port = 3001;
+const port = 3000;
 
 app.use(cors({
     origin: '*'
@@ -35,7 +35,7 @@ app.post('/send-email', (req, res) => {
     });
 
     const mailOptions = {
-        from: 'solarrechner@sternsystems.de',
+        from: 'ub@orgaplan-beratung.de',
         to: to,
         subject: subject,
         text: body,
