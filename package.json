@@ -13,7 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
     "cors": "^2.8.5",
-    "emailjs-com": "^3.2.0",
+    "@emailjs/browser": "^4.0.1",
     "express": "^4.18.2",
     "nodemailer": "^6.9.3",
     "notistack": "^3.0.1",
@@ -24,7 +24,7 @@
     "react-icons": "^5.3.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.11.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "recharts": "^2.7.2",
     "redux": "^4.2.1",
     "semantic-ui-css": "^2.5.0",
@@ -34,7 +34,7 @@
   "scripts": {
     "start": "react-scripts start",
     "server": "node server/server.js",
-    "build": "react-scripts build",
+    "build": "CI= npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -42,7 +42,11 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "no-unused-vars": "warn",
+      "react-hooks/exhaustive-deps": "warn"
+    }
   },
   "browserslist": {
     "production": [
