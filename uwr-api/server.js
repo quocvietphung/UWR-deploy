@@ -14,6 +14,10 @@ app.use(cors({
 app.use(express.json({ limit: '1gb' }));
 app.use(express.urlencoded({ limit: '1gb', extended: true }));
 
+app.get('/hello-world', (req, res) => {
+    res.json({ message: 'Hello World!' });
+});
+
 app.post('/send-email', (req, res) => {
     const { to, subject, body, attachments } = req.body;
 
