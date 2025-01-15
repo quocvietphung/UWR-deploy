@@ -2,3 +2,4 @@ node_modules
 build
 .idea
 uwr-api/node_modules
+.vscode

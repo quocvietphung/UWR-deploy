@@ -249,7 +249,7 @@ const Ergebnis = () => {
                             directoryPath: './pdfs'
                         };
 
-                        axios.post('https://happy-stone-0e9ef1203.4.azurestaticapps.net/api/save-pdf', data)
+                        axios.post('https://uwr-api.azurewebsites.net/save-pdf', data)
                             .then(response => {
                                 console.log('PDF gespeichert:', response.data);
                                 resolve();
@@ -291,7 +291,7 @@ const Ergebnis = () => {
                 };
 
                 axios
-                    .post('https://happy-stone-0e9ef1203.4.azurestaticapps.net/api/send-email', formData)
+                    .post('https://uwr-api.azurewebsites.net/send-email', formData)
                     .then((response) => {
                         console.log('Anfrage:', response.config);
                         console.log('Antwort:', response.data);
