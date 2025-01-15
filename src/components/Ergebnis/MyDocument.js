@@ -3,11 +3,11 @@ import { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/render
 
 const MyDocument = ({ kennzahlenData, basisInfoData, bereinigungData, equityBridgeData, unternehmenswert, ergebnisData }) => {
 
-    const logoImage = 'assets/images/ORGAPLANLOGO.png';
-    const brancheRadar = 'assets/images/branche_radar.png';
-    const lage = 'assets/images/lage.png';
-    const marktDaten = 'assets/images/marktdaten.png';
-    const equity = 'assets/images/equity.png';
+    const logoImage = '/assets/images/ORGAPLANLOGO.png';
+    const brancheRadar = '/assets/images/branche_radar.png';
+    const lage = '/assets/images/lage.png';
+    const marktDaten = '/assets/images/marktdaten.png';
+    const equity = '/assets/images/equity.png';
 
     const styles = StyleSheet.create({
         page: {
@@ -321,9 +321,6 @@ const MyDocument = ({ kennzahlenData, basisInfoData, bereinigungData, equityBrid
                     style={styles.logo}
                     source={{
                         uri: logoImage,
-                        method: 'GET',
-                        headers: {},
-                        body: '',
                     }}
                 />
             </View>
@@ -443,9 +440,6 @@ const MyDocument = ({ kennzahlenData, basisInfoData, bereinigungData, equityBrid
                     style={[styles.image]}
                     source={{
                         uri: brancheRadar,
-                        method: 'GET',
-                        headers: {},
-                        body: '',
                     }}
                 />
                 <Text style={styles.imageTitle}>Abbildung 1: Der EBIT-Umsatzfaktor in verschiedenen Branchengruppen.</Text>
@@ -472,9 +466,6 @@ const MyDocument = ({ kennzahlenData, basisInfoData, bereinigungData, equityBrid
                     style={[styles.image, { width: 450 , height: 300}]}
                     source={{
                         uri: lage,
-                        method: 'GET',
-                        headers: {},
-                        body: '',
                     }}
                 />
                 <Text style={styles.imageTitle}>Abbildung 2: Wertfaktor nach Lage (Value Factor based on Location)</Text>
@@ -487,9 +478,6 @@ const MyDocument = ({ kennzahlenData, basisInfoData, bereinigungData, equityBrid
                     style={[styles.image, {marginTop: 30, width: 580 , height: 400}]}
                     source={{
                         uri: marktDaten,
-                        method: 'GET',
-                        headers: {},
-                        body: '',
                     }}
                 />
                 <Text style={styles.imageTitle}>Abbildung 3: Wertfaktor von EBIT und Umsatz (Value Factor of EBIT and Revenue)</Text>
@@ -609,9 +597,6 @@ const MyDocument = ({ kennzahlenData, basisInfoData, bereinigungData, equityBrid
                     style={[styles.image]}
                     source={{
                         uri: equity,
-                        method: 'GET',
-                        headers: {},
-                        body: '',
                     }}
                 />
                 <Text style={styles.imageTitle}>Abbildung 4: Vorgehensweise der Equity Bridge.</Text>
